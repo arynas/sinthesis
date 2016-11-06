@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Thesis extends Model
 {
     protected $dates = ['ends_at', 'created_at', 'updated_at'];
-    protected $table = ['theses'];
+    protected $table = 'theses';
 
     public function proposal()
     {

@@ -20,6 +20,7 @@ class CreateProposalsTable extends Migration
             $table->integer('theses_id')->unsigned()->nullable();
             $table->string('title');
             $table->boolean('is_check')->nullable();
+            $table->string('note')->nullable();
             $table->timestamps();
 
             $table->foreign('theses_id')->references('id')->on('theses');

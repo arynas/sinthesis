@@ -14,7 +14,6 @@ use Illuminate\Http\Request;
 
 class ProposalsController extends Controller
 {
-{
     public function index()
     {
         $proposals = Proposal::whereNull('is_check')->paginate(10);
@@ -62,10 +61,11 @@ class ProposalsController extends Controller
         $thesis->ends_at = date("Y-m-d", strtotime(\Request::input('ends_at')));
         $thesis->save();
 
+
         $proposal = Proposal::find($id);
         $proposal->note = \Request::input('note');
         $proposal->is_check = 1;
-        $proposal->theses()->associate($thesis);
+        $proposal->thesis()->associate($thesis);
         $proposal->save();
 
         return redirect('proposals')->with(
@@ -105,5 +105,4 @@ class ProposalsController extends Controller
             'success', "Berhasil mengubah proposal."
         );
     }
-}
 }
