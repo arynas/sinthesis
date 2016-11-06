@@ -22,8 +22,8 @@ class Lecturer extends Model
         return $this->hasMany(Thesis::class);
     }
 
-//    public function conseling_schedules()
-//    {
-//        return $this->hasMany(Conseling_Schedule::class);
-//    }
+    public function conseling_schedules()
+    {
+        return $this->hasMany(ConselingSchedule::class);
+    }
 }

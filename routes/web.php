@@ -29,3 +29,10 @@ Route::post('proposals/{id}/reject','ProposalsController@reject');
 Route::get('proposals/{id}/create','ProposalsController@create');
 Route::post('proposals/{id}/submission','ProposalsController@submission');
 Route::put('proposals/{id}/update','ProposalsController@update');
+
+//theses
+Route::get('theses', 'ThesesController@index');
+Route::get('theses/{id}', 'ThesesController@show');
+Route::post('theses/{id}/renew', 'ThesesController@renew');
+Route::post('theses/{id}/finish', 'ThesesController@finish');
+Route::get('theses/{id}/download', 'ThesesController@download');

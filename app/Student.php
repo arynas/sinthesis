@@ -26,8 +26,8 @@ class Student extends Model
         return $this->hasOne(Thesis::class);
     }
 
-//    public function conseling_requests()
-//    {
-//        return $this->hasMany(Conseling_Request::class);
-//    }
+    public function conseling_requests()
+    {
+        return $this->hasMany(ConselingRequest::class);
+    }
 }
