@@ -1,2 +1,3 @@
-# sinthesis
+# Sinthesis
 System for Submit Proposal
+
