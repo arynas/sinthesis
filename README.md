@@ -1,3 +1,3 @@
 # Sinthesis
-System for Submit Proposal
+System for Submit Thesis Proposal
 
