@@ -19,8 +19,8 @@ class ProposalsTableSeeder extends Seeder
                 'student_id' => 1,
                 'file_id' => 1,
                 'title' => 'Perbandingan Penggunaan Metode A dan Metode B.',
-                'theses_id' => 1, //for accept proposal
-                'is_check' => '1' //for accept proposal
+//                'theses_id' => 1, //for accept proposal
+//                'is_check' => '1' //for accept proposal
             )
 //        ,
 //            [

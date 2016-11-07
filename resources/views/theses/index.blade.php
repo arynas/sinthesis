@@ -13,17 +13,13 @@
                 <section class="scrollable">
                     <header class="header header-height bg-white b-b b-light">
                         <div class="row">
-                            <div class="col-xs-15 col-md-4">
+                            <div class="col-xs-12 col-md-12">
                                 <p class="p-header text-right">
                                     @if(is_null($student->proposal))
                                         <a href="proposals/{{$student->id}}/create" class="btn btn-info"><i class="fa fa-file-text"></i> Ajukan Proposal</a>
                                     @endif
                                     @if(!is_null($student->proposal) && !is_null($student->proposal->is_check) && $student->proposal->is_check == 0)
                                         <a href="proposals/{{$student->id}}/create" class="btn btn-info"><i class="fa fa-file-text"></i> Revisi Proposal</a>
-                                    @endif
-                                    @if($student->thesis)
-                                        {{--<button class="btn btn-default btn-md" id="download"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Surat Pengantar</button>--}}
-                                        <a href="theses/{{$student->id}}/download" class="btn btn-default btn-md"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Surat Pengantar</a>
                                     @endif
                                 </p>
                             </div>
@@ -140,18 +136,6 @@
                                                     <label for="" style="font-size: large">{{date("d-m-Y", strtotime($student->thesis->ends_at))}}</label>
                                                 </li>
                                             </ul>
-                                            @if(!$student->thesis->extentions->isEmpty())
-                                                <ul class="list-group">
-                                                    <li class="list-group-item text-left">
-                                                        <label for="" style="font-weight:bold;">Riwayat Perpanjang</label><br/>
-                                                    </li>
-                                                    @foreach($student->thesis->extentions as $extention)
-                                                        <li class="list-group-item text-left">
-                                                            <label for="" style="font-size: large">{{date("d-m-Y", strtotime($extention->ends_at))}}</label>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            @endif
                                             @if($student->thesis->is_finished == 1)
                                                 <li class="list-group-item text-center">
                                                     <label for="" style="color: green;"><b>SKRIPSI SELESAI</b></label><br/>

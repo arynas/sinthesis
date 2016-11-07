@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Storage;
 
 class File extends Model
 {
@@ -14,7 +16,6 @@ class File extends Model
     protected $fillable = [
         'name',
         'path',
-        'size'
     ];
 
     /**
@@ -38,7 +39,6 @@ class File extends Model
     {
         $model = static::create([
             'name' => $file->getClientOriginalName(),
-            'size' => $file->getSize()
         ]);
 
         Storage::put(

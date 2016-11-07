@@ -23,7 +23,7 @@ class ThesesController extends Controller
 
         } elseif ($userActive->role == 'student') {
 
-            $student = Student::find($userActive->userable_id);
+            $student = Student::where('user_id',$userActive->id)->first();
 
             return view('theses.index', compact('student'));
         }
