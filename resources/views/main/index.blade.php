@@ -8,6 +8,7 @@
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
     <link href="{{ asset("css/datepicker3.css") }}" rel="stylesheet">
     <link href="{{ asset("css/styles.css") }}" rel="stylesheet">
+    @yield('styles')
 
     <!--Icons-->
     <script src="{{ asset('js/lumino.glyphs.js')}}"></script>
@@ -52,7 +53,9 @@
 </div>	<!--/.main-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="{{ asset('js/bootstrap.min.js')}}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
 @yield('scripts')
 </body>
 

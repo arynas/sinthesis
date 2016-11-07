@@ -105,14 +105,6 @@
                                             <label for="" style="">Tanggal Selesai</label><br/>
                                             <label for="" style="font-size: large">{{$thesis->ends_at}}</label>
                                         </li>
-                                        <li class="list-group-item">
-                                            <label for="" style="">Bimbingan Terakhir</label><br/>
-                                            @if(!is_null($conseling))
-                                                <label for="" style="font-size: large">{{date("d-m-Y H:i", strtotime($conseling->created_at))}}</label>
-                                            @else
-                                                <label for="" style="font-size: large">Belum ada bimbingan</label>
-                                            @endif
-                                        </li>
                                     </ul>
                                 </div>
                             </div>

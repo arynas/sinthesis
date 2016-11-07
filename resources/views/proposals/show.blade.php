@@ -90,7 +90,7 @@
                                                                     <textarea class="form-control" rows="3" name="note"></textarea>
                                                                 </div>
                                                                 <div class="form-group text-left">
-                                                                    <label for="selectLecturer">Dosen Pembimbing Skripsi</label>
+                                                                    <label for="selectLecturer">Dosen Pembimbing Tesis</label>
                                                                     <select class="form-control" name="lecturer">
                                                                         <option value="" disabled selected>Pilih dosen</option>
                                                                         @foreach($lecturers as $lecturer)
@@ -107,7 +107,7 @@
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group text-left">
-                                                                    <label for="selectTime">Waktu Skripsi</label>
+                                                                    <label for="selectTime">Waktu Tesis</label>
                                                                     <div class="input-group input-daterange">
                                                                         <span class="input-group-addon">Mulai</span>
                                                                         <input type="text" class="form-control" id='datetimepicker6' value="" name="starts_at">

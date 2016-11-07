@@ -19,6 +19,7 @@ class CreateConselingSchedulesTable extends Migration
             $table->string('note');
             $table->dateTime('starts_at');
             $table->dateTime('ends_at');
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('lecturer_id')->references('id')->on('lecturers');

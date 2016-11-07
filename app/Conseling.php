@@ -13,7 +13,7 @@ class Conseling extends Model
 
     public function thesis()
     {
-        return $this->belongsTo(Thesis::class);
+        return $this->belongsTo(Thesis::class,'theses_id');
     }
 
     public function comments()

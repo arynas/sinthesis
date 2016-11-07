@@ -85,18 +85,18 @@
                                 <div class="col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-header text-center" style="padding-top:10px;padding-bottom:10px;">
-                                            <label for="" style="font-size: large">Skripsi</label>
+                                            <label for="" style="font-size: large">Tesis</label>
                                         </div>
                                         @if(is_null($student->thesis))
                                             <ul class="list-group">
                                                 <li class="list-group-item text-center">
-                                                    <label for="" style="">Belum Bisa Mengerjakan Skripsi</label><br/>
+                                                    <label for="" style="">Belum Bisa Mengerjakan Tesis</label><br/>
                                                 </li>
                                             </ul>
                                         @else
                                             <ul class="list-group">
                                                 <li class="list-group-item text-left">
-                                                    <label for="" style="">Judul Skripsi</label><br/>
+                                                    <label for="" style="">Judul Tesis</label><br/>
                                                     <label for="" style="font-size: large">{{$student->thesis->title}}</label>
                                                 </li>
                                             </ul>
@@ -138,7 +138,7 @@
                                             </ul>
                                             @if($student->thesis->is_finished == 1)
                                                 <li class="list-group-item text-center">
-                                                    <label for="" style="color: green;"><b>SKRIPSI SELESAI</b></label><br/>
+                                                    <label for="" style="color: green;"><b>TESIS SELESAI</b></label><br/>
                                                 </li>
                                             @endif
                                         @endif
@@ -168,7 +168,7 @@
                                                         <thead>
                                                         <tr>
                                                             <th class="col-lg-1 text-center">No</th>
-                                                            <th class="col-lg-4 text-center">Judul Skripsi</th>
+                                                            <th class="col-lg-4 text-center">Judul Tesis</th>
                                                             <th class="col-lg-3 text-center">Nama Mahasiswa</th>
                                                             <th class="col-lg-4 text-center">Nama Dosen Pembimbing</th>
                                                             <th class="col-lg-4 text-center">Action</th>
@@ -211,7 +211,7 @@
                                                         <thead>
                                                         <tr>
                                                             <th class="col-lg-1 text-center">No</th>
-                                                            <th class="col-lg-2 text-center">Judul Skripsi</th>
+                                                            <th class="col-lg-2 text-center">Judul Tesis</th>
                                                             <th class="col-lg-3 text-center">Nama Mahasiswa</th>
                                                             <th class="col-lg-4 text-center">Nama Dosen Pembimbing</th>
                                                             <th class="col-lg-4 text-center">Action</th>
@@ -225,7 +225,7 @@
                                                                 <td>{{ $thesis->student->name }}</td>
                                                                 <td>{{ $thesis->lecturer->name }}</td>
                                                                 <td class="text-center">
-                                                                    <a href="theses/{{$thesis->id}}" class="btn btn-info"><i class="fa fa-eye"></i></a>
+                                                                    <a href="theses/{{$thesis->id}}" class="btn btn-info">Detail</a>
                                                                 </td>
                                                             </tr>
                                                         @endforeach

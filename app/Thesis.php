@@ -24,8 +24,8 @@ class Thesis extends Model
         return $this->belongsTo(Student::class);
     }
 
-//    public function conselings()
-//    {
-//        return $this->hasMany(Conseling::class, 'theses_id');
-//    }
+    public function conselings()
+    {
+        return $this->hasMany(Conseling::class);
+    }
 }

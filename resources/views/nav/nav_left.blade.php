@@ -6,6 +6,11 @@
             <li class="{{ Request::is('theses*') ? 'active' : '' }}"><a href="/theses"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Tesis</a></li>
          @elseif(Auth::user()->role == 'student')
             <li class="{{ Request::is('theses*') ? 'active' : '' }}"><a href="/theses"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Tesis</a></li>
-         @endif
+            <li class="{{ Request::is('conselings*') ? 'active' : '' }}"><a href="/conselings"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Bimbingan</a></li>
+            <li class="{{ Request::is('schedules*') ? 'active' : '' }}"><a href="/schedules"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg>Jadwal</a></li>
+        @elseif(Auth::user()->role == 'lecturer')
+            <li class="{{ Request::is('conselings*') ? 'active' : '' }}"><a href="/conselings"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Bimbingan</a></li>
+            <li class="{{ Request::is('schedules*') ? 'active' : '' }}"><a href="/schedules"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg>Jadwal</a></li>
+        @endif
     </ul>
 </div><!--/.sidebar-->

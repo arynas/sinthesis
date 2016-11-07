@@ -36,3 +36,20 @@ Route::get('theses/{id}', 'ThesesController@show');
 Route::post('theses/{id}/renew', 'ThesesController@renew');
 Route::post('theses/{id}/finish', 'ThesesController@finish');
 Route::get('theses/{id}/download', 'ThesesController@download');
+
+//conselings
+Route::get('conselings', 'ConselingsController@index');
+Route::post('conselings/{id}/store/', 'ConselingsController@store');
+Route::get('conselings/{id}/show/', 'ConselingsController@show');
+Route::get('conselings/{id}/comments', 'ConselingsController@showComments');
+Route::post('conselings/{id}/comments/store', 'ConselingsController@comment');
+
+//Schedules
+Route::get('schedules', 'SchedulesController@index');
+Route::get('schedules/{id}', 'SchedulesController@show');
+Route::post('schedules/{id}/store', 'SchedulesController@store');
+Route::post('schedules/confrim', 'SchedulesController@confrim');
+Route::delete('schedules/{id}/delete', 'SchedulesController@destroy');
+
+// Files
+Route::resource('files', 'FilesController', ['only' => ['store', 'show', 'destroy']]);

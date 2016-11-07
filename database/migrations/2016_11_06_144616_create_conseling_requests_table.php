@@ -18,6 +18,7 @@ class CreateConselingRequestsTable extends Migration
             $table->integer('conseling_schedule_id')->unsigned();
             $table->integer('student_id')->unsigned();
             $table->boolean('is_confirmed')->nullable();
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('conseling_schedule_id')->references('id')->on('conseling_schedules')->onDelete('cascade');
