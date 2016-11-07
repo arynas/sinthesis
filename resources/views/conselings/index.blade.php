@@ -123,7 +123,7 @@
                         <header class="header header-height bg-white b-b b-light">
                             <div class="row">
                                 <div class="col-xs-12 col-md-8">
-                                    <p class="p-header">Bimbingan</p>
+                                    <p class="p-header"></p>
                                 </div>
                             </div>
                         </header>
