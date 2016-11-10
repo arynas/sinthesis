@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\ConselingRequest;
 use App\Lecturer;
+use App\Notifications\NotificationRequest;
+use App\Notifications\NotificationSchedule;
+use App\Notifications\NotificationScheduleDelete;
 use App\Student;
 use App\ConselingSchedule as Schedule;
+use App\Thesis;
 use App\User;
 use Auth;
 use Validator;
@@ -91,6 +95,10 @@ class SchedulesController extends Controller
             $request->student_id = \Request::input('student');
             $request->save();
 
+            $schedule = $request->conseling_schedule;
+
+            $request->conseling_schedule->lecturer->user->notify(new NotificationSchedule($schedule));
+
             return redirect('schedules')->with('success', 'Berhasil memesan jadwal bimbingan. Tunggu konfirmasi dari dosen.');
 
         }
@@ -116,6 +124,13 @@ class SchedulesController extends Controller
             $schedule->starts_at = $starts;
             $schedule->ends_at = $ends;
             $schedule->save();
+
+            $theses = Thesis::where('lecturer_id', $id)->get();
+
+            foreach ($theses as $thesis)
+            {
+                $thesis->student->user->notify(new NotificationSchedule($schedule));
+            }
 
             return redirect('schedules')->with('success', 'Berhasil menambahkan jadwal bimbingan');
         }
@@ -144,6 +159,8 @@ class SchedulesController extends Controller
 
         }
 
+        $request->student->user->notify(new NotificationRequest($request));
+
     }
 
     public function destroy($id)
@@ -168,12 +185,27 @@ class SchedulesController extends Controller
                 $schedule = ConselingRequest::destroy($id);
             }
 
+            if($request->is_confirmed == 1)
+            {
+                $request->conseling_schedule->lecturer->user->notify(new NotificationScheduleDelete($request));
+            }
+
+
             return redirect('schedules')->with('success', 'Berhasil menghapus jadwal.');
 
         }
         elseif($userActive->role == 'lecturer')
         {
+
             $schedule = Schedule::find($id);
+
+            foreach ($schedule->conseling_requests as $request)
+            {
+                if($request->is_confirmed == 1)
+                {
+                    $request->student->user->notify(new NotificationScheduleDelete($request));
+                }
+            }
 
             $count = $schedule->conseling_requests()->get()->count();
 

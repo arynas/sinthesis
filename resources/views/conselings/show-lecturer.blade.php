@@ -13,7 +13,7 @@
                     <header class="header header-height bg-white b-b b-light">
                         <div class="row">
                             <div class="col-xs-12 col-md-8">
-                                <p class="p-header">Isi Bimbingan</p>
+                                <p class="p-header"></p>
                             </div>
                             <div class="col-xs-15 col-md-4">
                                 <p class="p-header text-right">

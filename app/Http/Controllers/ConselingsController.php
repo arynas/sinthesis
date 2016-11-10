@@ -6,6 +6,8 @@ use App\Comment;
 use App\Conseling;
 use App\ConselingRequest;
 use App\Lecturer;
+use App\Notifications\NotificationComment;
+use App\Notifications\NotificationConseling;
 use App\Student;
 use App\Thesis;
 use Auth;
@@ -50,6 +52,13 @@ class ConselingsController extends Controller
 
         $thesis = Thesis::find($conseling->theses_id);
 
+        if (Auth::user()->role == 'student')
+        {
+            $thesis->lecturer->user->notify(new NotificationConseling($conseling));
+        }else{
+            $thesis->student->user->notify(new NotificationConseling($conseling));
+        }
+
         return redirect('conselings')->with('success', 'Berhasil membuat bimbingan baru.');
     }
 
@@ -80,6 +89,13 @@ class ConselingsController extends Controller
         $comment->conseling_id = $id;
         $comment->content = \Request::input('content');
         $comment->save();
+
+        if (Auth::user()->role == 'student')
+        {
+            $comment->conseling->thesis->lecturer->user->notify(new NotificationComment($comment));
+        }elseif(Auth::user()->role == 'lecturer'){
+            $comment->conseling->thesis->student->user->notify(new NotificationComment($comment));
+        }
 
         return redirect()->back()->with('success', 'Komentar terkirim');
 

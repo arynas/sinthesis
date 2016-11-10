@@ -6,9 +6,11 @@ use App\File;
 use App\Http\Requests\ProposalRequest;
 use App\Http\Requests\ThesisRequest;
 use App\Lecturer;
+use App\Notifications\NotificationProposal;
 use App\Proposal;
 use App\Student;
 use App\Thesis;
+use Auth;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
@@ -45,6 +47,8 @@ class ProposalsController extends Controller
         $proposal->is_check = 0;
         $proposal->save();
 
+        $proposal->student->user->notify(new NotificationProposal($proposal));
+
         return redirect('proposals')->with(
             'success', "Proposal sudah dicek."
         );
@@ -67,6 +71,8 @@ class ProposalsController extends Controller
         $proposal->is_check = 1;
         $proposal->thesis()->associate($thesis);
         $proposal->save();
+
+        $proposal->student->user->notify(new NotificationProposal($proposal));
 
         return redirect('proposals')->with(
             'success', "Proposal sudah dicek. Mahasiswa sudah terdaftar skripsi."

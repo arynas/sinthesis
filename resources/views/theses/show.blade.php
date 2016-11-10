@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Detail Skripsi</h1>
+            <h1 class="page-header">Detail Tesis</h1>
         </div>
     </div><!--/.row-->
 
@@ -29,7 +29,7 @@
                                 <div class="panel panel-default">
                                     <ul class="list-group">
                                         <li class="list-group-item">
-                                            <label for="" style="">Judul Skripsi</label><br/>
+                                            <label for="" style="">Judul Tesis</label><br/>
                                             <label for="" style="font-size: large">{{$thesis->title}}</label>
                                         </li>
                                         <li class="list-group-item">
@@ -68,7 +68,7 @@
                     <header class="header header-height bg-white b-b b-light">
                         <div class="row">
                             <div class="col-xs-12 col-md-8">
-                                <p class="p-header">Detail Skripsi</p>
+                                <p class="p-header">Detail Tesis</p>
                             </div>
                         </div>
                     </header>
@@ -78,7 +78,7 @@
                                 <div class="panel panel-default">
                                     <ul class="list-group">
                                         <li class="list-group-item">
-                                            <label for="" style="">Judul Skripsi</label><br/>
+                                            <label for="" style="">Judul Tesis</label><br/>
                                             <label for="" style="font-size: large">{{$thesis->title}}</label>
                                         </li>
                                         <li class="list-group-item">

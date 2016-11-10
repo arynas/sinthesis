@@ -29,24 +29,23 @@ class LecturersTableSeeder extends Seeder
                 'sex' => '1',
                 'blood' => 'AB',
                 'motto' => 'Hemat pangkal Kaya'
+            ),
+            array(
+                'id' => 2,
+                'user_id' => 4,
+                'name' => 'Lecturer Dua',
+                'nik' => '104',
+                'nidn' => '10368',
+                'bornplace' => 'Klaten',
+                'borndate' => '07-03-1992',
+                'stay' => 'Jl. Kaliurang KM 20 No 7 Ngaglik, Sleman',
+                'address' => 'Jl. Magelang KM. 19 Sleman DIY',
+                'phoneI' => '085746532910',
+                'phoneII' => '085746532910',
+                'sex' => '1',
+                'blood' => 'AB',
+                'motto' => 'Rajin pangkal Pandai'
             )
-//        ,
-//            array(
-//                'id' => 2,
-//                'user_id' => 4,
-//                'name' => 'Zulfikar Ahmad',
-//                'nik' => '104',
-//                'nidn' => '10368',
-//                'bornplace' => 'Klaten',
-//                'borndate' => '07-03-1992',
-//                'stay' => 'Jl. Kaliurang KM 20 No 7 Ngaglik, Sleman',
-//                'address' => 'Jl. Magelang KM. 19 Sleman DIY',
-//                'phoneI' => '085746532910',
-//                'phoneII' => '085746532910',
-//                'sex' => '1',
-//                'blood' => 'AB',
-//                'motto' => 'Rajin pangkal Pandai'
-//            )
         );
 
         foreach ($lecturers as $lecturer) {

@@ -29,7 +29,7 @@
                                 <div class="col-md-8 col-md-offset-2">
                                     <div class="jumbotron text-center">
                                         <h1>Perhatian!</h1>
-                                        <p>Anda harus sudah terdaftar skripsi untuk menggunakan fitur ini</p>
+                                        <p>Anda harus sudah terdaftar tesis untuk menggunakan fitur ini</p>
                                     </div>
                                 </div>
                             </div>

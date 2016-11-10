@@ -133,7 +133,7 @@
                                 <div class="col-md-8 col-md-offset-2">
                                     <div class="jumbotron text-center">
                                         <h1>Perhatian!</h1>
-                                        <p>Anda harus sudah terdaftar skripsi untuk menggunakan fitur ini</p>
+                                        <p>Anda harus sudah terdaftar tesis untuk menggunakan fitur ini</p>
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +167,7 @@
                                                 <th class="col-lg-1 text-center">No</th>
                                                 <th class="col-lg-2">Nama Mahasiswa</th>
                                                 <th>NIM</th>
-                                                <th>Judul Skripsi</th>
+                                                <th>Judul Tesis</th>
                                                 <th class="col-lg-2 text-left">Action</th>
                                                 <th class="text-center">Keterangan</th>
                                             </tr>
@@ -198,7 +198,7 @@
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <div class="form-group">
-                                                                                Apakah Anda yakin skripsi mahasiswa bernama {{$conseling->student->name}} sudah selesai?
+                                                                                Apakah Anda yakin tesis mahasiswa bernama {{$conseling->student->name}} sudah selesai?
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
@@ -220,7 +220,7 @@
                                                                         <div class="panel panel-default">
                                                                             <ul class="list-group">
                                                                                 <li class="list-group-item">
-                                                                                    <label for="" style="">Judul Skripsi</label><br/>
+                                                                                    <label for="" style="">Judul Tesis</label><br/>
                                                                                     <label for="" style="font-size: large">{{$conseling->title}}</label>
                                                                                 </li>
                                                                                 <li class="list-group-item">

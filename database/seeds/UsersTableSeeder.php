@@ -17,22 +17,36 @@ class UsersTableSeeder extends Seeder
             array(
                 'id' => 1,
                 'username' => 'koordinatorthesis',
-                'email' => 'koordinator@sinthesis.ac.id',
-                'password' => bcrypt('koordinator'),
+                'email' => 'ahmad.nugroho@mail.ugm.ac.id',
+                'password' => bcrypt('ahmad.nugroho'),
                 'role' => 'administrator'
             ),
             array(
                 'id' => 2,
                 'username' => 'lecturersatu',
-                'email' => 'lecturersatu@sinthesis.ac.id',
-                'password' => bcrypt('lecturersatu'),
+                'email' => 'wenda.novayani@mail.ugm.ac.id',
+                'password' => bcrypt('wenda.novayani'),
                 'role' => 'lecturer'
             ),
             array(
                 'id' => 3,
                 'username' => 'studentsatu',
-                'email' => 'studentsatu@sinthesis.ac.id',
-                'password' => bcrypt('studentsatu'),
+                'email' => 'aulia.zikri.r@mail.ugm.ac.id',
+                'password' => bcrypt('aulia.zikri.r'),
+                'role' => 'student'
+            ),
+            array(
+                'id' => 4,
+                'username' => 'lecturerdua',
+                'email' => 'wenda@pcr.ac.id',
+                'password' => bcrypt('wenda'),
+                'role' => 'lecturer'
+            ),
+            array(
+                'id' => 5,
+                'username' => 'studentdua',
+                'email' => 'azikrirahman@gmail.com',
+                'password' => bcrypt('azikrirahman'),
                 'role' => 'student'
             )
         );

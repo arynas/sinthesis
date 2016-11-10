@@ -28,6 +28,21 @@ class StudentsTableSeeder extends Seeder
                 'phoneII' => '085746532910',
                 'sex' => '1',
                 'blood' => 'AB'
+            ),
+            array(
+                'id' => 2,
+                'user_id' => 5,
+                'lecturer_id' => 2,
+                'name' => 'Student Dua',
+                'nim' => '103456321',
+                'bornplace' => 'Klaten',
+                'borndate' => '09-07-1992',
+                'stay' => 'Jl. Kaliurang KM 20 No 7 Ngaglik, Sleman',
+                'address' => 'Jl. Jend. Sudirman KM 20 No 7 Depok',
+                'phoneI' => '085746532910',
+                'phoneII' => '085746532910',
+                'sex' => '1',
+                'blood' => 'AB'
             )
         );
 
