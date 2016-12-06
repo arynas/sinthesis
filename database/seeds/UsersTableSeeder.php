@@ -17,36 +17,36 @@ class UsersTableSeeder extends Seeder
             array(
                 'id' => 1,
                 'username' => 'koordinatorthesis',
-                'email' => 'ahmad.nugroho@mail.ugm.ac.id',
-                'password' => bcrypt('ahmad.nugroho'),
+                'email' => 'koordinator@mail.ugm.ac.id',
+                'password' => bcrypt('koordinator'),
                 'role' => 'administrator'
             ),
             array(
                 'id' => 2,
                 'username' => 'lecturersatu',
-                'email' => 'wenda.novayani@mail.ugm.ac.id',
-                'password' => bcrypt('wenda.novayani'),
+                'email' => 'ridif@live.com',
+                'password' => bcrypt('ridif'),
                 'role' => 'lecturer'
             ),
             array(
                 'id' => 3,
                 'username' => 'studentsatu',
-                'email' => 'aulia.zikri.r@mail.ugm.ac.id',
-                'password' => bcrypt('aulia.zikri.r'),
+                'email' => 'ridi@ugma.ac.id',
+                'password' => bcrypt('ridi'),
                 'role' => 'student'
             ),
             array(
                 'id' => 4,
-                'username' => 'lecturerdua',
-                'email' => 'wenda@pcr.ac.id',
-                'password' => bcrypt('wenda'),
+                'username' => 'lecturersatu',
+                'email' => 'lecturersatu@mail.ugm.ac.id',
+                'password' => bcrypt('lecturersatu'),
                 'role' => 'lecturer'
             ),
             array(
                 'id' => 5,
-                'username' => 'studentdua',
-                'email' => 'azikrirahman@gmail.com',
-                'password' => bcrypt('azikrirahman'),
+                'username' => 'studentsatu',
+                'email' => 'studentsatu@mail.ugm.ac.id',
+                'password' => bcrypt('studentsatu'),
                 'role' => 'student'
             )
         );
@@ -54,6 +54,10 @@ class UsersTableSeeder extends Seeder
         foreach ($users as $user) {
             App\User::create($user);
         }
+//
+//        //UserStudents Faker
+//
+//        $user_students = factory(\App\User::class, 'UserStudents', 30)->create();
 
     }
 }
