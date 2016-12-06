@@ -31,7 +31,7 @@ class UsersTableSeeder extends Seeder
             array(
                 'id' => 3,
                 'username' => 'studentsatu',
-                'email' => 'ridi@ugma.ac.id',
+                'email' => 'ridi@ugm.ac.id',
                 'password' => bcrypt('ridi'),
                 'role' => 'student'
             ),
